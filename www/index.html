@@ -1,81 +1,66 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <!-- Required meta tags-->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
-      <meta name="apple-mobile-web-app-capable" content="yes">
-      <!-- Color theme for statusbar -->
-      <meta name="theme-color" content="#2196f3">
-      <!-- Your app title -->
-      <title>My App Test 2018</title>
-      <!-- Path to Framework7 Library CSS -->
-      <link rel="stylesheet" href="css/f7/framework7.bundle.min.css">
-      <link rel="stylesheet" href="css/f7/framework7-icons.css">
-      <!-- Path to your custom app styles-->
-      <link rel="stylesheet" href="css/app/my-app.css">
-   </head>
-   <body>
-      <!-- App root element -->
-      <div id="app">
-         <!-- Statusbar overlay -->
-         <div class="statusbar"></div>
-         <div class="panel panel-left panel-reveal">
-            ... panel content goes here ...
-         </div>
-         <!-- Your main view, should have "view-main" class -->
-         <div class="view view-main">
-            <!-- Initial Page, "data-name" contains page name -->
-            <div data-name="home" class="page">
-               <!-- Top Navbar -->
-               <div class="navbar">
-                  <div class="navbar-inner">
-                     <div class="title">Awesome App</div>
-                  </div>
-               </div>
-               <!-- Toolbar -->
-               <div class="toolbar">
-                  <div class="toolbar-inner">
-                     <!-- Toolbar links -->
-                     <a href="#" class="link">Link 1</a>
-                     <a href="#" class="link">Link 2</a>
-                  </div>
-               </div>
-               <!-- Scrollable page content -->
-               <div class="page-content">
-                  <p>Page content goes here</p>
-                  <!--slider -->
-                  <div class="block-title">Volume</div>
-                  <div class="list simple-list">
-                     <ul>
-                        <li>
-                           <div class="item-cell width-auto flex-shrink-0">
-                              <i class="icon f7-icons ">volume_mute_fill</i>        
-                           </div>
-                           <div class="item-cell flex-shrink-3">
-                              <!-- range slider -->
-                              <div class="range-slider range-slider-init">
-                                 <input type="range" min="0" max="100" step="1" value="10">
-                              </div>
-                           </div>
-                           <div class="item-cell width-auto flex-shrink-0">
-                              <i class="icon f7-icons">volume_fill</i>        
-                           </div>
-                        </li>
-                     </ul>
-                  </div>
-                  <!-- end of slider -->
-                  <button class="button col" onclick="app.panel.open('left')">Button</button>
-                  <!-- Link to another page -->
-                  <a href="/about/">About app</a>
-               </div>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" contet="#2196f3">
+    <!-- Your app title -->
+    <title>My App Test 2018</title>
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="css/f7/framework7.bundle.min.css">
+    <link rel="stylesheet" href="css/f7/framework7-icons.css">
+    <!-- Path to FontAwesome CSS -->
+    <link rel="stylesheet" href="css/fa/all.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/app/my-app.css">
+</head>
+<body>
+<!-- App root element -->
+<div id="app">
+    <!-- Statusbar overlay -->
+    <div class="statusbar"></div>
+    <div id="navigation-menu" class="panel panel-left panel-cover">
+        <a class="navigation-menu-link" href="/server-configuration/"><i class="fas fa-cog"></i> Server Configuration</a>
+        <a class="navigation-menu-link" href="/clients/"><i class="fas fa-user"></i> Clients</a>
+        <a class="navigation-menu-link" href="/clients-banned/"><i class="fas fa-ban"></i> Ban list</a>
+        <a class="navigation-menu-link" href="/server-groups/"><i class="fas fa-users"></i> Server Groups</a>
+        <a class="navigation-menu-link" href="/channels-groups/"><i class="fas fa-comment-alt"></i> Channels Groups</a>
+    </div>
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
+            <!-- Top Navbar -->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#" class="link" onclick="app.panel.open('left')"><i class="fas fa-bars"></i></a>
+                    </div>
+                    <div class="title">TS3 MANAGER</div>
+                    <div class="right">
+                        <a href="#" class="link">Right</a>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <script type="text/javascript" src="cordova.js"></script>
-      <!-- Path to Framework7 Library JS-->
-      <script type="text/javascript" src="js/f7/framework7.bundle.min.js"></script>
-      <!-- Path to your app js-->
-      <script type="text/javascript" src="js/app/app.js"></script>      
-   </body>
+
+            <!-- Scrollable page content -->
+            <div class="page-content">
+                <div id="content"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="js/lib/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/lib/framework7.bundle.min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="js/app/const.js"></script>
+<script type="text/javascript" src="js/app/app.js"></script>
+<script type="text/javascript" src="js/app/db.js"></script>
+<script type="text/javascript" src="js/app/events.js"></script>
+</body>
 </html>

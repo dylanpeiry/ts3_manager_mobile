@@ -13,11 +13,13 @@ var app = new Framework7({
   // see https://blog.framework7.io/mastering-v2-router-958ea2dbd24f
   routes: [
     {
-      path: '/about/',
-      templateUrl: 'about.html',
+      path: '/server-configuration/',
+      templateUrl: 'server-configuration.html',
     },
   ],
   // ... other parameters
 });
 
 var mainView = app.views.create('.view-main');
+
+
