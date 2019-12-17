@@ -1,0 +1,37 @@
+API Routes
+
+Authentification
+Connexion
+POST /api/auth/login
+{login,password}
+
+Déconnexion
+POST /api/auth/logout
+
+Clients
+Lister tous les clients connectés depuis le début du serveur
+GET /api/clients
+
+Lister tous les clients bannis
+GET /api/clients/ban
+
+Supprimer un client
+DELETE /api/clients
+{uid}
+
+Ban d'un client
+Bannir un client
+POST /api/clients/ban
+{uid, reason, duration}
+
+Modifier le ban d'un client
+PUT /api/clients/ban
+{uid, reason, duration}
+
+Supprimer le ban d'un client
+DELETE /api/clients/ban
+{uid}
+
+
+BUGS //
+response msg staying after being set

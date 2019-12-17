@@ -14,3 +14,12 @@
 .f7-icons {
     font-size: 14px!important;
 }
+
+#navigation-button {
+    display: none;
+}
+
+#api-login-form {
+    margin: 0 auto 0 auto;
+    width: 80%;
+}

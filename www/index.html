@@ -24,7 +24,8 @@
     <!-- Statusbar overlay -->
     <div class="statusbar"></div>
     <div id="navigation-menu" class="panel panel-left panel-cover">
-        <a class="navigation-menu-link" href="/server-configuration/"><i class="fas fa-cog"></i> Server Configuration</a>
+        <a class="navigation-menu-link" href="/server-configuration/"><i class="fas fa-cog"></i> Server
+            Configuration</a>
         <a class="navigation-menu-link" href="/clients/"><i class="fas fa-user"></i> Clients</a>
         <a class="navigation-menu-link" href="/clients-banned/"><i class="fas fa-ban"></i> Ban list</a>
         <a class="navigation-menu-link" href="/server-groups/"><i class="fas fa-users"></i> Server Groups</a>
@@ -38,7 +39,8 @@
             <div class="navbar">
                 <div class="navbar-inner">
                     <div class="left">
-                        <a href="#" class="link" onclick="app.panel.open('left')"><i class="fas fa-bars"></i></a>
+                        <a href="#" id="navigation-button" class="link" onclick="app.panel.open('left')"><i
+                                class="fas fa-bars"></i></a>
                     </div>
                     <div class="title">TS3 MANAGER</div>
                     <div class="right">
@@ -49,7 +51,37 @@
 
             <!-- Scrollable page content -->
             <div class="page-content">
-                <div id="content"></div>
+                <div id="index-content" class="content">
+                    <div id="api-login-form" class="list">
+                        <ul>
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-title item-floating-label">Username</div>
+                                    <div class="item-input-wrap">
+                                        <input id="username" type="text" placeholder="Username">
+                                        <span class="input-clear-button"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-title item-floating-label">Password</div>
+                                    <div class="item-input-wrap">
+                                        <input id="password" type="password" placeholder="Password">
+                                        <span class="input-clear-button"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-content item-input">
+                                <div class="item-inner">
+                                    <button id="api-login-button"
+                                            class="col button-small button button-fill color-blue">Login
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -58,6 +90,7 @@
 <script type="text/javascript" src="js/lib/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="js/lib/framework7.bundle.min.js"></script>
 <!-- Path to your app js-->
+<script type="text/javascript" src="js/app/functions.js"></script>
 <script type="text/javascript" src="js/app/const.js"></script>
 <script type="text/javascript" src="js/app/app.js"></script>
 <script type="text/javascript" src="js/app/db.js"></script>
