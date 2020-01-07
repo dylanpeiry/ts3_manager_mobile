@@ -32,6 +32,27 @@ Supprimer le ban d'un client
 DELETE /api/clients/ban
 {uid}
 
+Démarrer le serveur
+POST /api/server/start
+{}
+
+Arrêter le serveur
+POST /api/server/stop
+{}
+
+Récupérer les informations du serveur
+GET /api/server/information
+
+===================
+FONCTIONNALITES //
+===================
+Affichage de la liste des clients par noms : OK
+Affichage des informations détaillées d'un client avec boutons de DELETE, BAN, ADD : OK
+Connexion au serverquery via login et pwd : OK
+
+Affichage des informations utiles du serveur : A FAIRE
+
+
 
 BUGS //
 response msg staying after being set

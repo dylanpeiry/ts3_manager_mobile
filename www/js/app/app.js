@@ -11,21 +11,8 @@ var app = new Framework7({
         {
             path: '/server-configuration/',
             templateUrl: 'server-configuration.html',
-        },
-        {
-            path: '/clients/',
-            component: ''
         }
     ],
     // ... other parameters
-});
-
-let notificationFull = app.notification.create({
-    icon: '<i class="fas fa-teamspeak"></i>',
-    title: 'TS3 Manager',
-    titleRightText: 'Info',
-    subtitle: 'Connection successful',
-    text: 'Test',
-    closeTimeout: 3000
 });
 

@@ -18,3 +18,11 @@ $(document).on('click', '#api-login-button', () => {
     let password = $("input#password").val();
     connectApi(username, password);
 });
+
+$(document).on('click','#client-more',e => {
+    let parentContainer = $(e.currentTarget).parents('.accordion-item')[0];
+
+    let clientNick = $(parentContainer).find('#client-nickname').text();
+    let clientId = $(parentContainer).find('#client-cldbid').text();
+    showClientGroups(clientNick,clientId);
+});
